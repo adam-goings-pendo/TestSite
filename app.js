@@ -1,6 +1,22 @@
 // defining variables
 const topics = ["Van Damme", "Schwarzenegger", "Chuck Norris"];
 
+//annotateURL function
+var urlHasChanged = hasUrlChanged();
+var lastAnnotation = {};
+
+function annotateUrl() {
+  if (!urlHasChanged) return lastAnnotation;
+  
+  var page = getCurrentPage();
+  
+  var annotation = {page: page};
+  
+  lastAnnotation = annotation;
+  urlHasChanged = false;
+  
+  return annotation;
+};
 
 //take each item in the array and make a button
 function createButtons() {
