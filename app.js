@@ -10,7 +10,7 @@ function annotateUrl() {
   
   var page = getCurrentPage();
   
-  var annotation = {page: page};
+  var annotation = {page: home};
   
   lastAnnotation = annotation;
   urlHasChanged = false;
